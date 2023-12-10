@@ -1,3 +1,5 @@
-<div class="profile">
-    <p>profile</p>
-</div>
+<script>
+    import Header from "$lib/Base/Header.svelte";
+</script>
+
+<Header></Header>
