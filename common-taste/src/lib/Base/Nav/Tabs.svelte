@@ -76,10 +76,4 @@
         border-bottom: 2px solid #d91b42;
         padding-bottom: 8px;
     }
-
-    /* TODO move to global css file if created */
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
 </style>
