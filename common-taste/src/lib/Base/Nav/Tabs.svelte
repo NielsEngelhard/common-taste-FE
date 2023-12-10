@@ -1,17 +1,52 @@
 <script>
-    import { createEventDispatcher } from 'svelte';
-    const dispatch = createEventDispatcher();
+    import { onMount } from "svelte";
+    import { page } from "$app/stores";
 
-    export let tabItems;
-    export let activeItem;
+    let tabItems = [
+        {
+            Name: "Home",
+            Href: "/",
+        },
+        {
+            Name: "Profile",
+            Href: "/profile",
+        },
+        {
+            Name: "Playlists",
+            Href: "/app/playlists",
+        },
+    ];
 
+    let activeTabItem;
+
+    onMount(async () => {
+        setCurrentActiveTabBasedOnUrlPath();
+    });
+
+    function changeTab(newTabName) {
+        activeTabItem = newTabName;
+    }
+
+    function setCurrentActiveTabBasedOnUrlPath() {
+        var currentUrlPath = $page.url.pathname;
+
+        var matchingTabItemWithPath = tabItems.find(
+            (item) => item.Href == currentUrlPath,
+        );
+
+        activeTabItem = matchingTabItemWithPath.Name;
+    }
 </script>
 
 <div class="tabs">
     <ul>
         {#each tabItems as tabItem}
-            <li on:click={() => dispatch('tabChange', tabItem)}>
-                <div class:activeTabItem={tabItem === activeItem}>{tabItem}</div>
+            <li>
+                <a href={tabItem.Href} on:click={() => changeTab(tabItem.Name)}>
+                    <div class:activeTabItem={tabItem.Name === activeTabItem}>
+                        {tabItem.Name}
+                    </div>
+                </a>
             </li>
         {/each}
     </ul>
@@ -40,5 +75,11 @@
         color: #d91b42;
         border-bottom: 2px solid #d91b42;
         padding-bottom: 8px;
+    }
+
+    /* TODO move to global css file if created */
+    a {
+        text-decoration: none;
+        color: inherit;
     }
 </style>
