@@ -7,7 +7,7 @@
 
 <style>
     header {
-        background: #f7f7f7;
+        background: var(--secondary-color);
         padding: 20px;
     }
 

@@ -1,5 +1,5 @@
 <script>
-    export let type = "primary";
+    export let type = "info";
     export let flat = false;
     export let inverse = false;
 </script>
@@ -18,29 +18,40 @@
         box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
     }
 
-    .primary {
-        background-color: #d91b42;
-        color: white;
+    .info {
+        background-color: var(--info-color);
+        color: var(--secondary-text-color);
     }
 
-    .secondary {
-        background-color: #45c496;
-        color: white;
+    .alert {
+        background-color: var(--alert-color);
+        color: var(--secondary-text-color);
+    }
+
+    .success {
+        background-color: var(--success-color);
+        color: var(--secondary-text-color);
     }
 
     .flat {
         box-shadow: none;
     }
 
-    .primary.inverse {
-        background-color: white;
-        color: #d91b42;
-        border: 2px solid #d91b42;
+    .info.inverse {
+        background-color: transparent;
+        color: var(--info-color);
+        border: 2px solid var(--info-color);
     }
 
-    .secondary.inverse {
-        background-color: white;
-        color: #45c496;
-        border: 2px solid #45c496;
+    .alert.inverse {
+        background-color: transparent;
+        color: var(--alert-color);
+        border: 2px solid var(--alert-color);
+    }
+
+    .success.inverse {
+        background-color: transparent;
+        color: var(--success-color);
+        border: 2px solid var(--success-color);
     }
 </style>

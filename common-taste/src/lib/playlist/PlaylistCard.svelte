@@ -66,7 +66,7 @@
         text-align: center;
         display: inline-block;
         font-size: 1.5em;
-        border-right: solid 1px #bdc3c7;
+        border-right: solid 1px var(--neutral-text-color);
     }
 
     .stats li:last-child {

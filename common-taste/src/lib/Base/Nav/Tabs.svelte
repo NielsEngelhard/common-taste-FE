@@ -72,8 +72,8 @@
     }
 
     .activeTabItem {
-        color: #d91b42;
-        border-bottom: 2px solid #d91b42;
+        color: var(--secondary-color);
+        border-bottom: 2px solid var(--secondary-color);
         padding-bottom: 8px;
     }
 </style>
