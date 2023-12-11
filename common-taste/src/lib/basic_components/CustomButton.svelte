@@ -1,5 +1,5 @@
 <script>
-    export let type = "info";
+    export let type = "accent";
     export let flat = false;
     export let inverse = false;
 </script>
@@ -28,8 +28,8 @@
         color: var(--secondary-text-color);
     }
 
-    .success {
-        background-color: var(--success-color);
+    .accent {
+        background-color: var(--accent-color);
         color: var(--secondary-text-color);
     }
 
@@ -49,9 +49,9 @@
         border: 2px solid var(--alert-color);
     }
 
-    .success.inverse {
+    .accent.inverse {
         background-color: transparent;
-        color: var(--success-color);
-        border: 2px solid var(--success-color);
+        color: var(--accent-color);
+        border: 2px solid var(--accent-color);
     }
 </style>

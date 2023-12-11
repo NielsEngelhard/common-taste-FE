@@ -8,9 +8,8 @@
 
 	--alert-color: #c1121f;
 	--faded-alert-color: rgba(217, 27, 66, 0.2);
-	--success-color: #005b47;
-	--faded-success-color: rgba(69, 196, 150, 0.2);
-	--info-color: #005b47;
+	--accent-color: #005b47;
+	--info-color: #008abb;
 }
 
 body {
@@ -35,8 +34,8 @@ ul, ol {
 	color: var(--alert-color);
 }
 
-.success-color {
-	color: var(--success-color);
+.accent-color {
+	color: var(--accent-color);
 }
 
 .info-color {

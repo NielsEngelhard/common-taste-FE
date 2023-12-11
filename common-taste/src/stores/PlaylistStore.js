@@ -8,7 +8,8 @@ const PlaylistStore = writable([
         pendingSongs: 10,
         passedSongs: 2,
         rejectedSongs: 10,
-        passThresholdPercentage: 50
+        passThresholdPercentage: 50,
+        playlistProvider: "spotify"
     },
     {
         id: 2,
@@ -17,7 +18,8 @@ const PlaylistStore = writable([
         pendingSongs: 5,
         passedSongs: 333,
         rejectedSongs: 44,
-        passThresholdPercentage: 25
+        passThresholdPercentage: 25,
+        playlistProvider: "spotify"
     }		
 ]);
 

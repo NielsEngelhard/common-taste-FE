@@ -8,7 +8,20 @@
 <div>
     <Card>
         <div class="poll">
-            <h3>{playlist.name}</h3>
+            <h3 class="d-inline-block">{playlist.name}</h3>
+
+            <h3 class="d-inline-block provider accent-color">
+                {#if playlist.playlistProvider == "spotify"}
+                    <i class="fa-brands fa-spotify"></i>
+                {:else if playlist.playlistProvider == "applemusic"}
+                    <i class="fa-brands fa-apple"></i>
+                {:else if playlist.playlistProvider == "deezer"}
+                    <i class="fa-brands fa-deezer"></i>
+                {:else if playlist.playlistProvider == "youtube"}
+                    <i class="fa-brands fa-youtube"></i>
+                {/if}
+            </h3>
+
             <p>Total participants: {playlist.totalParticipants}</p>
 
             <div class="image-container">
@@ -17,16 +30,19 @@
 
             <div class="stats">
                 <ul>
-                    <li class="cl-green">
-                        2934
+                    <li>
+                        <span class="--accent-color"
+                            >{playlist.passedSongs}</span
+                        >
                         <span>Approved</span>
                     </li>
-                    <li class="cl-blue">
-                        2934
+                    <li>
+                        <span class="info-color">{playlist.pendingSongs}</span>
                         <span>Pending</span>
                     </li>
-                    <li class="cl-red">
-                        2934
+                    <li>
+                        <span class="alert-color">{playlist.rejectedSongs}</span
+                        >
                         <span>Rejected</span>
                     </li>
                 </ul>
@@ -80,8 +96,12 @@
         width: 32%;
         text-align: center;
         display: inline-block;
-        font-size: 1.5em;
+
         border-right: solid 1px var(--neutral-text-color);
+    }
+
+    .stats li > span:first-child {
+        font-size: 1.5em;
     }
 
     .stats li:last-child {
@@ -99,5 +119,10 @@
     .image-container img {
         border-radius: 10px;
         max-width: 100%;
+    }
+
+    .provider {
+        float: right;
+        font-size: 2em;
     }
 </style>
