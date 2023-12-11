@@ -34,15 +34,15 @@
 
             <div>
                 <div class="d-inline-block">
-                    <CustomButton flat={true}>Info</CustomButton>
+                    <CustomButton flat={true}>INFO</CustomButton>
                 </div>
 
                 <div class="d-inline-block">
-                    <CustomButton flat={true}>Listen</CustomButton>
+                    <CustomButton flat={true}>LISTEN</CustomButton>
                 </div>
 
                 <div class="d-inline-block vote-container">
-                    <CustomButton flat={true}>Vote</CustomButton>
+                    <CustomButton flat={true}>VOTE</CustomButton>
                 </div>
             </div>
         </div>
