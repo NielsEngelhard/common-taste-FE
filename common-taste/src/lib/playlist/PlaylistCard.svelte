@@ -34,15 +34,21 @@
 
             <div>
                 <div class="d-inline-block">
-                    <CustomButton flat={true}>INFO</CustomButton>
+                    <CustomButton flat={true}
+                        ><i class="fa-solid fa-circle-info"></i> INFO</CustomButton
+                    >
                 </div>
 
                 <div class="d-inline-block">
-                    <CustomButton flat={true}>LISTEN</CustomButton>
+                    <CustomButton flat={true}
+                        ><i class="fa-solid fa-play"></i> PLAY</CustomButton
+                    >
                 </div>
 
                 <div class="d-inline-block vote-container">
-                    <CustomButton flat={true}>VOTE</CustomButton>
+                    <CustomButton flat={true}
+                        ><i class="fa-regular fa-comments"></i> VOTE</CustomButton
+                    >
                 </div>
             </div>
         </div>

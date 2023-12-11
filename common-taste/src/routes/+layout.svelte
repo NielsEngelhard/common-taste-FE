@@ -3,6 +3,7 @@
     import Footer from "$lib/Base/Footer.svelte";
     import Tabs from "../lib/Base/Nav/Tabs.svelte";
     import "../styles/global.css";
+    import "@fortawesome/fontawesome-free/css/all.min.css";
 </script>
 
 <Header />
