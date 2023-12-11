@@ -10,9 +10,9 @@
         <div class="poll">
             <h3>{playlist.name}</h3>
             <p>Total participants: {playlist.totalParticipants}</p>
-            <div>
-                <!-- bovenaan half een custom image? stats onderaan:
-                https://codepen.io/marceloag/pen/DbqYwy -->
+
+            <div class="image-container">
+                <img src="/arnold.jpg" class="" />
             </div>
 
             <div class="stats">
@@ -32,8 +32,18 @@
                 </ul>
             </div>
 
-            <div class="delete">
-                <CustomButton flat={true}>Delete</CustomButton>
+            <div>
+                <div class="d-inline-block">
+                    <CustomButton flat={true}>Info</CustomButton>
+                </div>
+
+                <div class="d-inline-block">
+                    <CustomButton flat={true}>Listen</CustomButton>
+                </div>
+
+                <div class="d-inline-block vote-container">
+                    <CustomButton flat={true}>Vote</CustomButton>
+                </div>
             </div>
         </div>
     </Card>
@@ -52,9 +62,8 @@
         margin-bottom: 30px;
     }
 
-    .delete {
-        margin-top: 30px;
-        text-align: center;
+    .vote-container {
+        float: right;
     }
 
     .stats {
@@ -79,5 +88,10 @@
         font-size: 0.5em;
         margin-top: 0.6em;
         font-weight: 700;
+    }
+
+    .image-container img {
+        border-radius: 10px;
+        max-width: 100%;
     }
 </style>
