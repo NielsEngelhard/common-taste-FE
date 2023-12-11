@@ -1,9 +1,19 @@
 :root {
-    --main-black: #333;
+	--primary-color: #fdf0d5;
+	--secondary-color: #669bbc;
+
+    --primary-text-color: #333;
+	--neutral-text-color: #81878b;
+
+	--alert-color: #FFADAD;
+	--faded-alert-color: rgba(217, 27, 66, 0.2);
+	--success-color: #E4F1EE;
+	--faded-success-color: rgba(69, 196, 150, 0.2);
+	--info-color: #003049;
 }
 
 body {
-	color: var(--main-black);
+	color: var(primary-text-color);
 	margin: 0;
 	box-sizing: border-box;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -12,4 +22,21 @@ body {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+ul, ol {
+	list-style: none;
+	padding: 0;
+}
+
+.alert-color {
+	color: var(--alert-color);
+}
+
+.success-color {
+	color: var(--success-color);
+}
+
+.info-color {
+	color: var(--info-color);
 }

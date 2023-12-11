@@ -7,10 +7,17 @@
 
 <Header />
 
-<Tabs />
-
 <main>
+    <Tabs />
+
     <slot />
 </main>
 
 <Footer />
+
+<style>
+    main {
+        max-width: 960px;
+        margin: 40px auto;
+    }
+</style>
